@@ -8,7 +8,7 @@ package dynamic.sortMethod;
  */
 public class SelSort {
     public static void main(String[] args){
-        int[] testArray = selectionSort(new int[]{9,3,4,1,6,5,7,0,8,7,2});
+        int[] testArray = selectionSort(new int[]{9,3,4,1,6,5,0,8,7,2});
         for(int k=0; k<testArray.length;k++){
             System.out.println("testArray[" + k + "]:" + testArray[k]);
         }
