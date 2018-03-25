@@ -1,7 +1,6 @@
 # LONGWAY-BYJAVA
-================
-learn Java  
-##排序算法
+### learn Java  
+## 排序算法
 - 冒泡排序   
 - 选择排序
 - 插入排序
