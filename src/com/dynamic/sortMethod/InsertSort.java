@@ -13,28 +13,28 @@ package dynamic.sortMethod;
  */
 
 public class InsertSort {
-    public static void main(String[] args){
-        int[] testArray = insertionSort(new int[]{9,3,4,1,6,5,7,0,8,7,2});
-        for(int k=0; k<testArray.length;k++){
+    public static void main(String[] args) {
+        int[] testArray = insertionSort(new int[]{9, 3, 4, 1, 6, 5, 7, 0, 8, 7, 2});
+        for (int k = 0; k < testArray.length; k++) {
             System.out.println("testArray[" + k + "]:" + testArray[k]);
         }
     }
 
-    public static int[] insertionSort(int[] array){
-        if(array.length == 0)
+    public static int[] insertionSort(int[] array) {
+        if (array.length == 0)
             return array;
 //        第一个元素被认为已排序
         int current;//不要在循环中定义变量
-        for(int i = 0; i<array.length-1;i++){
-            current = array[i+1];
+        for (int i = 0; i < array.length - 1; i++) {
+            current = array[i + 1];
             int preIndex = i;
-            while (preIndex>=0 && current<array[preIndex]){
+            while (preIndex >= 0 && current < array[preIndex]) {
                 //把之前有序的依次往后挪1
-                array[preIndex+1] = array[preIndex];
+                array[preIndex + 1] = array[preIndex];
                 preIndex--;
             }
 //          把现在的值插入刚才有序的位置，preindex之前--，所以这里加1
-            array[preIndex+1] = current;
+            array[preIndex + 1] = current;
         }
         return array;
 

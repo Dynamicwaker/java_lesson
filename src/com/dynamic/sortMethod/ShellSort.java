@@ -12,24 +12,24 @@ package dynamic.sortMethod;
  */
 
 public class ShellSort {
-    public static void main(String[] args){
-        int[] testArray = shellSort(new int[]{9,3,4,1,6,5,0,8,7,2});
-        for(int k=0; k<testArray.length;k++){
+    public static void main(String[] args) {
+        int[] testArray = shellSort(new int[]{9, 3, 4, 1, 6, 5, 0, 8, 7, 2});
+        for (int k = 0; k < testArray.length; k++) {
             System.out.println("testArray[" + k + "]:" + testArray[k]);
         }
     }
 
-    public static int[] shellSort(int[] array){
+    public static int[] shellSort(int[] array) {
         int len = array.length;
         int temp, gap = len / 2;
-        if(len==0)
+        if (len == 0)
             return array;
-        while (gap > 0){
+        while (gap > 0) {
 //            与插入排序类似，但是分组进行比较
-            for (int i = gap;i < len;i++){
+            for (int i = gap; i < len; i++) {
                 temp = array[i];
                 int preIndex = i - gap;
-                while(preIndex >=0 && array[preIndex]>temp){
+                while (preIndex >= 0 && array[preIndex] > temp) {
                     array[preIndex + gap] = array[preIndex];
                     preIndex -= gap;
                 }

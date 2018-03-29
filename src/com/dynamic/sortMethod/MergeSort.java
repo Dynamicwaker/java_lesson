@@ -12,27 +12,27 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-    public static void main(String[] args){
-        int[] testArray = mergeSort(new int[]{9,3,4,1,6,5,0,8,7,2});
-        for(int k=0; k<testArray.length;k++){
+    public static void main(String[] args) {
+        int[] testArray = mergeSort(new int[]{9, 3, 4, 1, 6, 5, 0, 8, 7, 2});
+        for (int k = 0; k < testArray.length; k++) {
             System.out.println("testArray[" + k + "]:" + testArray[k]);
         }
 
     }
 
-    public static int[] mergeSort(int[] array){
-        if(array.length < 2)
+    public static int[] mergeSort(int[] array) {
+        if (array.length < 2)
             return array;
-        int mid = array.length/2;
-        int[] left = Arrays.copyOfRange(array,0,mid);
-        int[] right = Arrays.copyOfRange(array,mid,array.length);
-        return merge(mergeSort(left),mergeSort(right));
+        int mid = array.length / 2;
+        int[] left = Arrays.copyOfRange(array, 0, mid);
+        int[] right = Arrays.copyOfRange(array, mid, array.length);
+        return merge(mergeSort(left), mergeSort(right));
     }
 
 
-    public static int[] merge(int[] left, int[] right){
+    public static int[] merge(int[] left, int[] right) {
         int[] result = new int[left.length + right.length];
-        for(int index = 0,i = 0,j = 0;index < result.length;index++){
+        for (int index = 0, i = 0, j = 0; index < result.length; index++) {
             if (i >= left.length)
                 result[index] = right[j++];
             else if (j >= right.length)
