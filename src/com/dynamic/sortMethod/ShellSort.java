@@ -21,6 +21,7 @@ public class ShellSort {
 
     public static int[] shellSort(int[] array) {
         int len = array.length;
+        //gap为初始增量，就是把array分为几组，隔多少距离的元素进行比较
         int temp, gap = len / 2;
         if (len == 0)
             return array;

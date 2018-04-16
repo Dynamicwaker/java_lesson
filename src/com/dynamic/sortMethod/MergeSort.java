@@ -29,7 +29,7 @@ public class MergeSort {
         return merge(mergeSort(left), mergeSort(right));
     }
 
-
+    //组合两个数组
     public static int[] merge(int[] left, int[] right) {
         int[] result = new int[left.length + right.length];
         for (int index = 0, i = 0, j = 0; index < result.length; index++) {

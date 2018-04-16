@@ -28,8 +28,9 @@ public class InsertSort {
         for (int i = 0; i < array.length - 1; i++) {
             current = array[i + 1];
             int preIndex = i;
+            //循环与之前的位置进行比较，如果大了就往后挪
             while (preIndex >= 0 && current < array[preIndex]) {
-                //把之前有序的依次往后挪1
+                //把之前有序的依次往后挪1，把大的值放到后面
                 array[preIndex + 1] = array[preIndex];
                 preIndex--;
             }
