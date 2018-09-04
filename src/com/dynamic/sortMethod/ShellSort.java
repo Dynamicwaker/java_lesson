@@ -1,4 +1,4 @@
-package dynamic.sortMethod;
+package com.dynamic.sortMethod;
 
 /**
  * @author <a herf="mailto:xinghj0308@gmail.cn">xinghuajian</a>

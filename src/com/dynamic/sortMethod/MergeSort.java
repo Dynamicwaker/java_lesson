@@ -1,4 +1,4 @@
-package dynamic.sortMethod;
+package com.dynamic.sortMethod;
 
 import java.util.Arrays;
 
