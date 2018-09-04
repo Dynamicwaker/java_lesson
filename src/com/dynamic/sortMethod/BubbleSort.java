@@ -1,4 +1,4 @@
-package dynamic.sortMethod;
+package com.dynamic.sortMethod;
 
 /**
  * @author <a herf="mailto:xinghj0308@gmail.cn">xinghuajian</a>
@@ -22,7 +22,7 @@ public class BubbleSort {
         if (array.length == 0) {
             return array;
         }
-//        针对所有的元素重复以上的步骤，除了最后一个；
+        // 针对所有的元素重复以上的步骤，除了最后一个；
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length - 1 - i; j++)
                 if (array[j + 1] < array[j]) {
