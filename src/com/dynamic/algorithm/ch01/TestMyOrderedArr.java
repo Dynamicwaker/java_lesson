@@ -17,6 +17,8 @@ public class TestMyOrderedArr {
         myArray.insert(36);
 
         myArray.display();
-
+        System.out.println(myArray.binarySearch(45));
+        System.out.println(myArray.binarySearch(99));
+        System.out.println(myArray.binarySearch(21));
     }
 }

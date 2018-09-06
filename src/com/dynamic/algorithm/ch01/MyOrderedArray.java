@@ -33,7 +33,7 @@ public class MyOrderedArray {
             }
         }
         for (int j = elems; j > i; j--) {
-            arr[j] = arr[j-1];
+            arr[j] = arr[j - 1];
         }
         arr[i] = value;
         elems++;
@@ -62,6 +62,27 @@ public class MyOrderedArray {
             return i;
         }
 
+    }
+
+    // 二分查找
+    public int binarySearch(long searchKey) {
+        int inter;
+        int bottomline = 0;//下届
+        int floodline = elems;
+        while (true) {
+            inter = (bottomline + floodline) / 2;
+            if (arr[inter] == searchKey) {
+                return inter;
+            } else if (bottomline > floodline) {
+                return -1;
+            } else {
+                if (arr[inter] > searchKey) {
+                    floodline = inter - 1;
+                } else {
+                    bottomline = inter + 1;
+                }
+            }
+        }
     }
 
     // 删除操作
