@@ -20,7 +20,7 @@ public class TestQueue {
         System.out.println(myQueue.isEmpty());
         System.out.println(myQueue.isFull());
 
-        while (!myQueue.isEmpty()){
+        while (!myQueue.isEmpty()) {
             System.out.println(myQueue.remove());
         }
 
@@ -40,12 +40,23 @@ public class TestQueue {
         System.out.println(myQueueTemp.isEmpty());
         System.out.println(myQueueTemp.isFull());
 
-        while (!myQueueTemp.isEmpty()){
+        while (!myQueueTemp.isEmpty()) {
             System.out.println(myQueueTemp.remove());
         }
 
         myQueueTemp.insert(871);
 
+        // 优先级队列排序
+        PriorityQueue pq = new PriorityQueue(10);
+        pq.insert(17);
+        pq.insert(9);
+        pq.insert(21);
+        pq.insert(2);
+        pq.insert(53);
+
+        while (!pq.isEmpty()) {
+            System.out.print(pq.remove() + " ");
+        }
 
     }
 }
