@@ -39,6 +39,10 @@ public class TestLink {
         System.out.println();
         linkList.insert(69, 0);
         linkList.displayAll();
+        System.out.println();
+        linkList.delete(37);
+        linkList.delete(81);
+        linkList.displayAll();
     }
 
 }

@@ -50,6 +50,7 @@ public class LinkList {
         return current;
     }
 
+    // 插入节点到指定位置
     public void insert(long value, int position) {
         if (position == 0) {
             insert(value);
@@ -63,5 +64,25 @@ public class LinkList {
             current.setNext(link);
         }
     }
+
+    public void delete(long key) {
+        Link current = first;
+        Link former = first;
+        while (current.getData() != key) {
+            if (current.getNext() != null) {
+                former = current;
+                current = current.getNext();
+            } else {
+                return;
+            }
+        }
+        // 删除第一个节点
+        if (current == first) {
+            first = first.getNext();
+        } else {
+            former.setNext(current.getNext());
+        }
+    }
+
 
 }
