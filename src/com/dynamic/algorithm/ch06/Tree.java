@@ -60,8 +60,8 @@ public class Tree {
         Node findNode = find(keyData);
         findNode.setOtherData(newOtherData);
     }
-
-    // 先序遍历
+    // 先、中、后都是相对于根节点而言
+    // 先序遍历，先访问父节点
     public void preOrder(Node node) {
         if (node != null) {
             node.display();
@@ -70,16 +70,16 @@ public class Tree {
         }
     }
 
-    // 中序遍历
-    public void inOrder(Node node) {
+    // 中序遍历，先访问左子节点
+    public void medOrder(Node node) {
         if (node != null) {
-            inOrder(node.getLeftNode());
+            medOrder(node.getLeftNode());
             node.display();
-            inOrder(node.getRightNode());
+            medOrder(node.getRightNode());
         }
     }
 
-    // 后序遍历
+    // 后序遍历，先访问右子节点
     public void endOrder(Node node) {
         if (node != null) {
             endOrder(node.getLeftNode());
