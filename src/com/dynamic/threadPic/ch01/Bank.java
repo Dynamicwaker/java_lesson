@@ -15,7 +15,7 @@ public class Bank {
         this.name = name;
     }
 
-    /*
+    /**
      * 如果一个进程获取锁之后运行bank实例中的desposit()方法，那么其他线程无法运行
      * 这个实例中的desposit方法和withdraw方法，需要排队等待
      * 线程的互斥机制称为监视，或许锁叫做拥有监视
@@ -28,7 +28,7 @@ public class Bank {
 
         money += m;
     }
-    /*
+    /**
      * 等效于：
      * public void desposit(int m){
      *    synchronized(this){
@@ -36,6 +36,21 @@ public class Bank {
      *    }
      * }
      */
+
+    /**
+     *  线程执行完wait方法就会暂停操作进入等待队列，只有当下面4中情况之一才能被唤醒
+     *  1. 有其他的线程notify()方法来唤醒
+     *  2. 有其他的线程notifyAll()方法来唤醒
+     *  3. 有其他的线程interrupt()方法来唤醒
+     *  4. wait方法超时
+     */
+
+    /**
+     * notify()和notifyAll()
+     * notify()唤醒线程少，处理速度要比后者快，但是处理不好就可能停止
+     * notifyAll()代码要更为健壮，不是很清楚时，使用notifyAll更为稳妥
+     */
+
 
     public synchronized boolean withdraw(int m) {
         if (money >= m) {
