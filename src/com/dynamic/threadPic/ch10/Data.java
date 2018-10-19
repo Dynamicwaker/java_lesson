@@ -3,7 +3,7 @@ package com.dynamic.threadPic.ch10;
 /**
  * @author <a herf="mailto:xinghj0308@gmail.cn">xinghuajian</a>
  * @version Created on 2018/10/15.22:30
- * @description
+ * @description 作为共享资源角色，提供不修改内部状态的操作（read）和提供修改内部状态的操作（write）
  */
 
 public class Data {

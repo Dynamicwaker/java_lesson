@@ -28,7 +28,7 @@ public class ReadWriteLock {
         while (writingWriters > 0 || (perferWriter && waitingWriters > 0)) {
             wait();
         }
-        // 实际正在读取的线程个数增加1
+        // 在读取执行之前，readLock方法就会被调用，实际正在读取的线程个数增加1
         readingReaders++;
     }
 
@@ -40,9 +40,10 @@ public class ReadWriteLock {
     }
 
     public synchronized void writeLock() throws InterruptedException {
-        // 正在等待写入的线程增加1
+        // 在执行写入操作之前执行写入操作，正在等待写入的线程增加1
         waitingWriters++;
         try {
+            // 守护条件：readingReaders <=0 && writingWriters <=0
             while (readingReaders > 0 || writingWriters > 0) {
                 wait();
             }
