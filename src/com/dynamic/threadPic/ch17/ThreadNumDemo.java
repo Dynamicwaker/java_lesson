@@ -13,7 +13,7 @@ public class ThreadNumDemo {
     public static void main(String[] args) {
         /*;
         6 - Monitor Ctrl-Break
-        5 - Attach Listener
+        5 - Attach Listener // 添加监听
         4 - Signal Dispatcher //分发处理发送给JVM信号的线程
         3 - Finalizer //调用对象的finalize方法的线程，就是垃圾回收的线程
         2 - Reference Handler //清除reference的线程
