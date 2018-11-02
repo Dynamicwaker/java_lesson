@@ -1,7 +1,5 @@
 package com.dynamic.threadPic.ch17;
 
-import java.util.ArrayList;
-
 /**
  * @author <a href="mailto:xinghuajian@gtmap.cn">xinghuajian</a>
  * @version 1.0, 2018-10-29
