@@ -2,6 +2,7 @@ package com.dynamic.threadPic.ch17;
 
 import java.util.concurrent.locks.ReentrantLock;
 
+
 /**
  * @author <a href="mailto:xinghuajian@gtmap.cn">xinghuajian</a>
  * @version 1.0, 2018-11-13
@@ -12,10 +13,12 @@ public class IntLock implements Runnable {
     public static ReentrantLock lock2 = new ReentrantLock();
 
     int lock;
+
     /**
      * 控制枷锁顺序，方便构造死锁
+     *
      * @param lock
-    */
+     */
     public IntLock(int lock) {
         this.lock = lock;
     }
@@ -55,7 +58,7 @@ public class IntLock implements Runnable {
     }
 
 
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) throws InterruptedException {
         IntLock r1 = new IntLock(1);
         IntLock r2 = new IntLock(2);
         Thread t1 = new Thread(r1);
