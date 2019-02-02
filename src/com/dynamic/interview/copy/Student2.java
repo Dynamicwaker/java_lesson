@@ -31,11 +31,13 @@ public class Student2 implements Cloneable {
     public Object clone() {
         Student2 stu = null;
         try{
-            stu = (Student2)super.clone();	//浅复制
+            // 浅复制
+            stu = (Student2)super.clone();
         }catch(CloneNotSupportedException e) {
             e.printStackTrace();
         }
-        stu.addr = (Address)addr.clone();	//深度复制
+        // 深度复制
+        stu.addr = (Address)addr.clone();
         return stu;
     }
 
