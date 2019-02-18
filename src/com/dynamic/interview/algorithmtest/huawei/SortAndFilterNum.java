@@ -20,7 +20,7 @@ public class SortAndFilterNum {
             b[i] = 0;
         }
         int len = a.length;
-        // 把index等于数值的设为1，则达到了去重的目的
+        // 把index等于数值的设为1，则达到了去重的目的，巧用数组记录、排序和去重
         for (int i = 0; i < len; i++) {
             b[a[i]] = 1;
         }

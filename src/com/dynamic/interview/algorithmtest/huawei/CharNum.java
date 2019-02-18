@@ -2,8 +2,6 @@ package com.dynamic.interview.algorithmtest.huawei;
 
 import java.util.Scanner;
 
-;
-
 /**
  * @author <a href="mailto:xinghuajian@gtmap.cn">xinghuajian</a>
  * @version 1.0, 2019-02-02
