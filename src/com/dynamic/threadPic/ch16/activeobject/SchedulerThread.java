@@ -16,7 +16,7 @@ public class SchedulerThread extends Thread {
 
     /**
      * invoke()和execute()是两个不同的线程
-    */
+     */
     public void invoke(MethodRequset requset) {
         queue.putRequest(requset);
     }

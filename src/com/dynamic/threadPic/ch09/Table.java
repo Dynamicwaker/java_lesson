@@ -7,11 +7,17 @@ package com.dynamic.threadPic.ch09;
  */
 public class Table {
     private final String[] buffer;
-    // 下次put的位置
+    /**
+     *下次put的位置
+      */
     private int tail;
-    // 下次take的位置
+    /**
+     *下次take的位置
+     */
     private int head;
-    // buffer中的蛋糕个数
+    /**
+     * buffer中的蛋糕个数
+     */
     private int count;
 
     public Table(int count) {
@@ -20,7 +26,10 @@ public class Table {
         this.tail = 0;
         this.count = 0;
     }
-    // throws InterruptedException 可以理解为可以取消
+
+    /**
+     * throws InterruptedException 可以理解为可以取消
+      */
     public synchronized void put(String cake) throws InterruptedException {
         System.out.println(Thread.currentThread().getName() + " puts " + cake);
         // !count >= buffer.length 守护条件

@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 /**
  * @author <a herf="mailto:xinghj0308@gmail.cn">xinghuajian</a>
  * @version Created on 2018/11/18.22:50
- * @description ThreadLocal,作为简单的容器，只有当前线程可以访问
+ * @description ThreadLocal, 作为简单的容器，只有当前线程可以访问
  */
 
 public class ThreadLocalDemo {
@@ -26,7 +26,7 @@ public class ThreadLocalDemo {
         @Override
         public void run() {
             try {
-                if(t1.get()==null){
+                if (t1.get() == null) {
                     t1.set(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
                 }
                 Date t = t1.get().parse("2015-03-29 19:29:" + i % 60);

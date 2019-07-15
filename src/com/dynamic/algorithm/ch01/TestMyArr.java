@@ -7,7 +7,7 @@ package com.dynamic.algorithm.ch01;
  */
 
 public class TestMyArr {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         MyArray myArray = new MyArray();
 
         myArray.insert(20);
@@ -25,7 +25,7 @@ public class TestMyArr {
         myArray.delete(223);
         myArray.display();
 
-        myArray.modify(1223,1234);
+        myArray.modify(1223, 1234);
         myArray.display();
     }
 }

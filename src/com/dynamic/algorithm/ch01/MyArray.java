@@ -55,13 +55,13 @@ public class MyArray {
     }
 
     // 删除操作
-    public void delete(long deleteKey){
+    public void delete(long deleteKey) {
 
-        if(find(deleteKey)==-1){
+        if (find(deleteKey) == -1) {
             System.out.println("查找不到指定数据");
-        }else{
-            for(int i = find(deleteKey);i < elems;i++){
-                arr[i] = arr[i+1];
+        } else {
+            for (int i = find(deleteKey); i < elems; i++) {
+                arr[i] = arr[i + 1];
             }
         }
 
@@ -69,16 +69,13 @@ public class MyArray {
 
 
     // 修改数
-    public void modify(long former_value,long newValue){
-        if(find(former_value)==-1){
+    public void modify(long former_value, long newValue) {
+        if (find(former_value) == -1) {
             System.out.println("查找不到指定数据，修改失败！");
-        }else {
+        } else {
             arr[find(former_value)] = newValue;
         }
     }
-
-
-
 
 
 }

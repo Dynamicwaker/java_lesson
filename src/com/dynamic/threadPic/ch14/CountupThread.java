@@ -19,7 +19,7 @@ public class CountupThread extends Thread {
     public void shutdownRequest() {
         shutdownRequested = true;
         // 如果该线程是sleep或者wait，光判断请求状态是不够的
-        interrupt() ;
+        interrupt();
     }
 
     // 检查是否发出了终止请求

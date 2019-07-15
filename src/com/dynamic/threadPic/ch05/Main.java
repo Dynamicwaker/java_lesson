@@ -17,7 +17,7 @@ public class Main {
         // 方式二：线程安全的synchronizedList
         // final List<Integer> list = Collections.synchronizedList(new ArrayList<Integer>());
         // 方式三：线程安全CopyOnWriteArrayList，方式二和三的选择需要根据现实情况
-        final List<Integer> list =  new CopyOnWriteArrayList<Integer>();
+        final List<Integer> list = new CopyOnWriteArrayList<Integer>();
         new WriterThread(list).start();
         new ReaderThread(list).start();
     }

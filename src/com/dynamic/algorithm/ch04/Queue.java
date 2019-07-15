@@ -7,15 +7,25 @@ package com.dynamic.algorithm.ch04;
  */
 
 public class Queue {
-    // 数组
+    /**
+     * 数组
+     */
     private int[] arr;
-    // 最大空间
+    /**
+     * 最大空间
+     */
     private int maxSize;
-    // 有效元素大小
+    /**
+     * 有效元素大小
+     */
     private int elems;
-    // 队头
+    /**
+     * 队头
+     */
     private int font;
-    // 队尾
+    /**
+     * 队尾
+     */
     private int end;
 
     public Queue(int maxSize) {
@@ -26,28 +36,37 @@ public class Queue {
         end = -1;
     }
 
-    // 插入数据
+    /**
+     * 插入数据
+     */
     public void insert(int value) {
         arr[++end] = value;
         elems++;
     }
 
-    // 移除数据
+    /**
+     * 移除数据
+     */
     public long remove() {
         elems--;
         return arr[font++];
     }
 
-    // 是否为空
+    /**
+     * 是否为空
+     */
     public boolean isEmpty() {
         return (elems == 0);
     }
 
-    // 是否满了
-    public boolean isFull(){
-        return  (end==maxSize-1);
+    /**
+     * 是否满了
+     */
+    public boolean isFull() {
+        return (end == maxSize - 1);
     }
-    public int size(){
+
+    public int size() {
         return elems;
     }
 

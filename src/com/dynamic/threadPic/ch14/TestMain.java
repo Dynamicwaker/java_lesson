@@ -4,7 +4,7 @@ package com.dynamic.threadPic.ch14;
 /**
  * @author <a href="mailto:xinghuajian@gtmap.cn">xinghuajian</a>
  * @version 1.0, 2018-10-21
- * @description 捕获程序整体的终止时,未设置异常处理，程序就停止，但是在停止前，“未设置异常处理器”和“退出钩子”会依次被调用
+ * @description 捕获程序整体的终止时, 未设置异常处理，程序就停止，但是在停止前，“未设置异常处理器”和“退出钩子”会依次被调用
  */
 public class TestMain {
     public static void main(String[] args) {

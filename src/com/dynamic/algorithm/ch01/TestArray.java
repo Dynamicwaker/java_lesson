@@ -7,7 +7,7 @@ package com.dynamic.algorithm.ch01;
  */
 
 public class TestArray {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // 创建数组
         int[] myArray = new int[30];
 
@@ -30,5 +30,5 @@ public class TestArray {
         System.out.println(shortArray[0]);
         System.out.println(longArray[0]);
 
-     }
+    }
 }

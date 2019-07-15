@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
 public class CountDownLatchDemo implements Runnable {
     /**
      * 等待10个线程执行完主线程才能执行
-    */
+     */
     static final CountDownLatch end = new CountDownLatch(10);
     static final CountDownLatchDemo demo = new CountDownLatchDemo();
 

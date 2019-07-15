@@ -6,13 +6,15 @@ package com.dynamic.interview;
  * @description
  */
 public class ZeroTest {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int i = 0;
         System.out.println(i);
-        System.out.println(i + '0');// char类型，是阿斯克码
-        System.out.println(i + "0");// 字符串拼接
-        System.out.println(i ++);
-        System.out.println(i --);
+        // char类型，是阿斯克码
+        System.out.println(i + '0');
+        // 字符串拼接
+        System.out.println(i + "0");
+        System.out.println(i++);
+        System.out.println(i--);
 
     }
 }

@@ -7,10 +7,14 @@ package com.dynamic.algorithm.ch06;
  */
 
 public class Tree {
-    // 根
+    /**
+     * 根
+      */
     private Node root;
 
-    // 插入方法
+    /**
+     * 插入方法
+     */
     public void insert(int keyData, int otherData) {
         Node newNode = new Node(keyData, otherData);
 
@@ -39,7 +43,9 @@ public class Tree {
         }
     }
 
-    // 查找方法
+    /**
+     *  查找方法
+     */
     public Node find(int keyData) {
         Node current = root;
         while (current.getKeyData() != keyData) {
@@ -55,13 +61,18 @@ public class Tree {
         return current;
     }
 
-    // 修改方法
+    /**
+     * 修改方法
+     */
     public void change(int keyData, int newOtherData) {
         Node findNode = find(keyData);
         findNode.setOtherData(newOtherData);
     }
-    // 先、中、后都是相对于根节点而言
-    // 先序遍历，先访问父节点
+
+    /**
+     * 先、中、后都是相对于根节点而言
+     * 先序遍历，先访问父节点
+     */
     public void preOrder(Node node) {
         if (node != null) {
             node.display();
@@ -70,7 +81,9 @@ public class Tree {
         }
     }
 
-    // 中序遍历，先访问左子节点
+    /**
+     * 中序遍历，先访问左子节点
+     */
     public void medOrder(Node node) {
         if (node != null) {
             medOrder(node.getLeftNode());
@@ -79,7 +92,9 @@ public class Tree {
         }
     }
 
-    // 后序遍历，先访问右子节点
+    /**
+     * 后序遍历，先访问右子节点
+     */
     public void endOrder(Node node) {
         if (node != null) {
             endOrder(node.getLeftNode());

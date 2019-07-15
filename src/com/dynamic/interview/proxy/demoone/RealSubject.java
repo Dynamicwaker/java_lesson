@@ -7,7 +7,7 @@ package com.dynamic.interview.proxy.demoone;
  */
 public class RealSubject implements Subject {
     @Override
-    public void doSomething(){
+    public void doSomething() {
         System.out.println("call doSomething() ");
     }
 }

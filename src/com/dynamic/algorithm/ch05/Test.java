@@ -28,6 +28,6 @@ public class Test {
             array.insert(j);
         }
         dateEnd = new Date();
-        System.out.println("构建数组数据用时：" +(dateEnd.getTime() - dateTemp.getTime()));
+        System.out.println("构建数组数据用时：" + (dateEnd.getTime() - dateTemp.getTime()));
     }
 }

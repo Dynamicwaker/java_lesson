@@ -7,7 +7,7 @@ package com.dynamic.algorithm.ch01;
  */
 
 public class TestMyOrderedArr {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         MyOrderedArray myArray = new MyOrderedArray();
 
         myArray.insert(21);

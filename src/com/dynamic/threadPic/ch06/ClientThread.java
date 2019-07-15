@@ -27,7 +27,7 @@ public class ClientThread extends Thread {
             // 随机生成0-1000的数作为sleep时间
             try {
                 Thread.sleep(random.nextInt(1000));
-            }catch (InterruptedException e){
+            } catch (InterruptedException e) {
 
             }
         }

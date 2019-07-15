@@ -3,7 +3,7 @@ package com.dynamic.interview.pattern.singleton;
 /**
  * @author <a href="mailto:xinghuajian@gtmap.cn">xinghuajian</a>
  * @version 1.0, 2019-01-04
- * @description  双重校验锁-线程安全
+ * @description 双重校验锁-线程安全
  */
 public class DoubleCheckSingleton {
 
@@ -26,7 +26,7 @@ public class DoubleCheckSingleton {
                  *  3、将 uniqueInstance 指向分配的内存地址
                  *  但是由于 JVM 具有指令重排的特性，执行顺序有可能变成 1>3>2。指令重排在单线程环境下不会出现问题，
                  *  但是在多线程环境下会导致一个线程获得还没有初始化的实例
-                */
+                 */
                 if (uniqueInstance == null) {
                     uniqueInstance = new DoubleCheckSingleton();
                 }

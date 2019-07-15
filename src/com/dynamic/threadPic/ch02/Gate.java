@@ -12,6 +12,7 @@ public class Gate {
     private int counter = 0;
     private String name = "Nobody";
     private String address = "NoWhere";
+
     // 改写成synchronized
     public synchronized void pass(String name, String address) {
         this.counter++;
@@ -19,6 +20,7 @@ public class Gate {
         this.address = address;
         check();
     }
+
     // 改写成synchronized
     public synchronized String toString() {
         return "No." + counter + ": " + name + ", " + address;

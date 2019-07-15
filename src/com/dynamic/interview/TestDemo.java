@@ -10,8 +10,10 @@ public class TestDemo {
         // 在第一次被载入jvm时运行，但由于是局部变量，x=5不影响后面的值
         int x = 5;
     }
-
-    static int x, y;// 初始化时x=y=0
+    /**
+     * 初始化时x = y = 0
+     */
+    static int x, y;
 
     public static void main(String[] args) {
         x--;
@@ -20,9 +22,11 @@ public class TestDemo {
         System.out.println("2: x=" + x);
         System.out.println(x + y++ + x);
 
-        int a = 5 ;
-        int b = 3 ;
-        if(!(a==b)&&(a==1+b++)){};
+        int a = 5;
+        int b = 3;
+        if (!(a == b) && (a == 1 + b++)) {
+        }
+        ;
         // !(a==b)为真，不短路，后面的表达式还要执行
         System.out.println("a = " + a);
         System.out.println("b = " + b);

@@ -7,8 +7,8 @@ package com.dynamic.threadPic.ch14;
  * 1. 安全的终止线程(安全性)
  * 2. 必定会进行安全处理(生存性)
  * 3. 发出终止请求后尽快进行终止处理(响应性)
- *  Main 请求发送者
- *  不能使用Thread的stop方法，因为stop方法，实例的安全性就无法确保，因为即使是正在执行的synchronized方法也会被终止
+ * Main 请求发送者
+ * 不能使用Thread的stop方法，因为stop方法，实例的安全性就无法确保，因为即使是正在执行的synchronized方法也会被终止
  */
 public class Main {
     public static void main(String[] args) {

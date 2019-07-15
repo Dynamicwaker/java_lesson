@@ -8,17 +8,28 @@ package com.dynamic.interview;
 
 public class TestDemo4 {
     public static void main(String[] args) {
-        String a = new String("ab"); // a 为一个引用
-        String b = new String("ab"); // b为另一个引用,对象的内容一样
-        String aa = "ab"; // 放在常量池中
-        String bb = "ab"; // 从常量池中查找
-        if (aa == bb) // true
-            System.out.println("aa==bb");
-        if (a == b) // false，非同一对象
-            System.out.println("a==b");
-        if (a.equals(b)) // true
+        // a 为一个引用
+        String a = new String("ab");
+        // b为另一个引用,对象的内容一样
+        String b = new String("ab");
+        // 放在常量池中
+        String aa = "ab";
+        // 从常量池中查找
+        String bb = "ab";
+        // true
+        if (aa == bb) {
+            System.out.println("aa == bb");
+        }
+        // false，非同一对象
+        if (a == b) {
+            System.out.println("a == b");
+        }
+        // true
+        if (a.equals(b)) {
             System.out.println("aEQb");
-        if (42 == 42.0) { // true
+        }
+        // true
+        if (42 == 42.0) {
             System.out.println("true");
         }
         System.out.println("-------------------基本类型和包装类型-------------------------");
@@ -46,7 +57,7 @@ public class TestDemo4 {
         String s2 = new StringBuilder("ja").append("va").toString();
         System.out.println(s2.intern() == s2);
         // 最高效的实现计算2乘以8
-        int result =  2 << 3;
+        int result = 2 << 3;
         System.out.println("result: " + result);
         // Java语言的方法调用只支持参数的值传递，当一个对象实例作为一个参数被传递到方法中时，参数的值就是对该对象的引用。
         // 对象的属性可以在被调用过程中被改变，但对对象引用的改变是不会影响到调用者的

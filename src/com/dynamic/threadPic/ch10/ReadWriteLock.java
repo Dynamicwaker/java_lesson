@@ -55,7 +55,7 @@ public class ReadWriteLock {
         writingWriters++;
     }
 
-    public synchronized void writeUnlock(){
+    public synchronized void writeUnlock() {
         // 实际正在写入的线程个数减少1
         writingWriters--;
         perferWriter = false;

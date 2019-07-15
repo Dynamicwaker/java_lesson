@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @author <a href="mailto:xinghuajian@gtmap.cn">xinghuajian</a>
  * @version 1.0, 2018-11-13
- * @description 公平锁,t1,t2交叉运行
+ * @description 公平锁, t1, t2交叉运行
  */
 public class FairLock implements Runnable {
     public static ReentrantLock fairLock = new ReentrantLock(true);

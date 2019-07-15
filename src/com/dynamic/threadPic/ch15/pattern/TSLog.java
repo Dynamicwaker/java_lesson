@@ -11,20 +11,22 @@ import java.io.PrintWriter;
  */
 public class TSLog {
     private PrintWriter writer = null;
-    public TSLog(String fileName){
-        try{
+
+    public TSLog(String fileName) {
+        try {
             writer = new PrintWriter(new FileWriter(fileName));
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     // 写日志
-    public void println(String s){
+    public void println(String s) {
         writer.println(s);
     }
 
     // 关闭日志
-    public void close(){
+    public void close() {
         writer.println("=== End of log ===");
         writer.close();
     }

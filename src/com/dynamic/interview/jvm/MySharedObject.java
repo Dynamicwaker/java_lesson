@@ -18,7 +18,7 @@ public class MySharedObject {
     //member variables pointing to two objects on the heap
     /**
      * Integer对象（object2，object4）实例化将会被存储堆上
-    */
+     */
     public Integer object2 = new Integer(22);
     public Integer object4 = new Integer(44);
 

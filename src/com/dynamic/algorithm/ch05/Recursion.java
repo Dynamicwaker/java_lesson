@@ -10,7 +10,10 @@ public class Recursion {
     public static void main(String[] args) {
         Recursion.test(0);
     }
-    // 一个递，一个归
+
+    /**
+     *  一个递，一个归
+     */
     public static void test(int i) {
         if (i < 100) {
             System.out.println("‘L0ve Swj!’ * " + i);

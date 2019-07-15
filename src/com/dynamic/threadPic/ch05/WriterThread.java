@@ -16,8 +16,8 @@ public class WriterThread extends Thread {
     }
 
     @Override
-    public void run(){
-        for(int i=0;true;i++){
+    public void run() {
+        for (int i = 0; true; i++) {
             list.add(i);
             list.remove(0);
         }

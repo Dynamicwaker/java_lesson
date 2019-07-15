@@ -10,9 +10,9 @@ public class Main {
         System.out.println("MAIN BEGIN");
         for (int i = 0; i < 10; i++) {
             Log.println("main: i = " + i);
-            try{
+            try {
                 Thread.sleep(100);
-            }catch(InterruptedException e){
+            } catch (InterruptedException e) {
 
             }
         }

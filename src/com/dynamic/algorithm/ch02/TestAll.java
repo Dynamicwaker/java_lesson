@@ -6,7 +6,7 @@ package com.dynamic.algorithm.ch02;
  */
 
 public class TestAll {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         BubbleArray bubbleArray = new BubbleArray();
         bubbleArray.insert(21);
         bubbleArray.insert(35);
@@ -45,9 +45,9 @@ public class TestAll {
         insertArray.display();
 
         StudentArray studentArray = new StudentArray();
-        Student student1 = new Student(218,"a张三","男",18);
-        Student student2 = new Student(102,"c李四","女",24);
-        Student student3 = new Student(315,"b王五","男",26);
+        Student student1 = new Student(218, "a张三", "男", 18);
+        Student student2 = new Student(102, "c李四", "女", 24);
+        Student student3 = new Student(315, "b王五", "男", 26);
 
         studentArray.insert(student1);
         studentArray.insert(student2);

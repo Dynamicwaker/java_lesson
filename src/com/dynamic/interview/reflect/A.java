@@ -15,7 +15,7 @@ public class A {
         System.out.println(a.toUpperCase() + "," + b.toUpperCase());
     }
 
-    public void print(){
+    public void print() {
         System.out.println("test void case!");
     }
 

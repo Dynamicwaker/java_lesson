@@ -14,10 +14,11 @@ public class StaticIniTest {
         System.out.println("StaticIniTest的静态初始化块");
         name = "java code";
     }
+
     /**
      * 与实例对象一致的，name先执行静态代码块里面的赋值，再执行下面的赋值，
      * 所以java code会被覆盖
-    */
+     */
     static String name = "java coding";
 
     public static void main(String[] args) {

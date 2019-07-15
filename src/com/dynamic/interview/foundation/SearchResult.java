@@ -3,7 +3,7 @@ package com.dynamic.interview.foundation;
 /**
  * @author <a href="mailto:xinghuajian@gtmap.cn">xinghuajian</a>
  * @version 1.0, 2018-12-01
- * @description Comparable的使用,自身可以与同类进行比较
+ * @description Comparable的使用, 自身可以与同类进行比较
  */
 public class SearchResult implements Comparable<SearchResult> {
     long relativeRatio;

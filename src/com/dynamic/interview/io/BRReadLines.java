@@ -14,12 +14,12 @@ public class BRReadLines {
     public static void main(String[] args) throws IOException {
         // 使用 System.in 创建 BufferedReader
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        String str ;
+        String str;
         System.out.println("Enter lines of text.");
         System.out.println("Enter 'end' to quit.");
-        do{
+        do {
             str = bufferedReader.readLine();
             System.out.println(str);
-        }while (!"end".equals(str));
+        } while (!"end".equals(str));
     }
 }

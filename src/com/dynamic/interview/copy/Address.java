@@ -20,9 +20,9 @@ public class Address implements Cloneable {
     @Override
     public Object clone() {
         Address addr = null;
-        try{
-            addr = (Address)super.clone();
-        }catch(CloneNotSupportedException e) {
+        try {
+            addr = (Address) super.clone();
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
         return addr;

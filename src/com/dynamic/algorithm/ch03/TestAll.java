@@ -7,7 +7,7 @@ package com.dynamic.algorithm.ch03;
  */
 
 public class TestAll {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Reverse re = new Reverse("Hello,bitch!");
         System.out.println(re.doReverse());
 

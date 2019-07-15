@@ -13,7 +13,7 @@ public class RealResult<T> extends Result<T> {
     }
 
     @Override
-    public T getResultValue(){
+    public T getResultValue() {
         return resultValue;
     }
 }

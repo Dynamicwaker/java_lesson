@@ -5,7 +5,7 @@ package com.dynamic.threadPic.ch17;
  * @version 1.0, 2018-10-29
  * @description
  */
-public class ObjThread extends Thread{
+public class ObjThread extends Thread {
     LockTestClass lock;
     int i = 0;
 
@@ -25,6 +25,6 @@ public class ObjThread extends Thread{
         //私有锁方法，采用synchronized(object)的方式
 //      lock.synMethodWithObj();
         // 类锁方法，采用static synchronized increment的方式
-         LockTestClass.increament();
+        LockTestClass.increament();
     }
 }

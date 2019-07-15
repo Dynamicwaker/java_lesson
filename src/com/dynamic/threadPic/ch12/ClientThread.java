@@ -25,7 +25,7 @@ public class ClientThread extends Thread {
                 channel.putRequest(request);
                 Thread.sleep(random.nextInt(1000));
             }
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
 
         }
     }

@@ -26,7 +26,7 @@ public class ListNoGeneric {
          *  a3.add(new Object());
          *  a3.add(new String("Hello a3"));
          *  会编译报错，不允许这么增加非Integer对象
-        */
+         */
 
         List<?> a4 = a1;
         a1.remove(0);
@@ -34,10 +34,7 @@ public class ListNoGeneric {
         /**
          * 不允许加入任何对象
          * a4.add(new Object());
-        */
-
-
-
+         */
 
 
     }

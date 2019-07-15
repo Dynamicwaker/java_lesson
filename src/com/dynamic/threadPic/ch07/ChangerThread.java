@@ -18,16 +18,16 @@ public class ChangerThread extends Thread {
     }
 
     @Override
-    public void run(){
-        try{
-            for (int i=0;true;i++){
-                data.change("No."+i);
+    public void run() {
+        try {
+            for (int i = 0; true; i++) {
+                data.change("No." + i);
                 Thread.sleep(random.nextInt(1000));
                 data.save();
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }

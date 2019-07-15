@@ -11,7 +11,7 @@ public class FinallyNotWork {
          * finally是在return表达式之后执行，此时return的结果已经被暂存下来，
          * 待finally执行结束才会把之前暂存的数据返回，所以此处的temp值是1001
          * finally没有执行的情况：1、没有进入try方法 2、进入try方法，但是出现死循环或者死锁 3、try中有System.exit()
-        */
+         */
         System.out.println("temp的值是：" + notWork());
     }
 

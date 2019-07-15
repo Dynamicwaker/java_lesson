@@ -17,9 +17,9 @@ public class ClassDemo1 {
         Class c2 = foo1.getClass();
 
         /* 官网c1，c2表示了Foo类的类类型
-        * 万事万物皆是对象，类也是对象，是Class类的实例对象
-        * 这个对象我们成为该类的类类型
-        * */
+         * 万事万物皆是对象，类也是对象，是Class类的实例对象
+         * 这个对象我们成为该类的类类型
+         * */
 
         // 不管c1，c2都代表了Foo类的类类型，一个类只能是Class类的一个实例对象
         System.out.println(c1 == c2);

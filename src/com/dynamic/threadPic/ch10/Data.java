@@ -35,6 +35,7 @@ public class Data {
             lock.writeUnlock();
         }
     }
+
     // 数组的复制，System.arraycopy也可实现
     private char[] doRead() {
         char[] newbuf = new char[buffer.length];
@@ -44,6 +45,7 @@ public class Data {
         slowly();
         return newbuf;
     }
+
     // for循环每次执行slowly()，默认写入数据比读所需要的时间长
     private void doWrite(char c) {
         for (int i = 0; i < buffer.length; i++) {
@@ -51,6 +53,7 @@ public class Data {
             slowly();
         }
     }
+
     // 辅助延时功能
     private void slowly() {
         try {

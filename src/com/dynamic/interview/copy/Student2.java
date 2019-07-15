@@ -30,14 +30,14 @@ public class Student2 implements Cloneable {
     @Override
     public Object clone() {
         Student2 stu = null;
-        try{
+        try {
             // 浅复制
-            stu = (Student2)super.clone();
-        }catch(CloneNotSupportedException e) {
+            stu = (Student2) super.clone();
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
         // 深度复制
-        stu.addr = (Address)addr.clone();
+        stu.addr = (Address) addr.clone();
         return stu;
     }
 

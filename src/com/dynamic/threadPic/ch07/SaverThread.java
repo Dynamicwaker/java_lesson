@@ -16,17 +16,17 @@ public class SaverThread extends Thread {
     }
 
     @Override
-    public void run(){
-        try{
-            while (true){
+    public void run() {
+        try {
+            while (true) {
                 // 保存数据
                 data.save();
                 // 休眠一秒
                 Thread.sleep(1000);
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }

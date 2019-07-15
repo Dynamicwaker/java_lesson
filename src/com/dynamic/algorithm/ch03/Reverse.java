@@ -10,18 +10,18 @@ public class Reverse {
 
     private String input;
 
-    public Reverse(String input){
+    public Reverse(String input) {
         this.input = input;
     }
 
-    public String doReverse(){
+    public String doReverse() {
         MycharStack mycharStack = new MycharStack(input.length());
-        for(int i = 0;i<input.length();i++){
+        for (int i = 0; i < input.length(); i++) {
             char ch = input.charAt(i);
             mycharStack.push(ch);
         }
         String output = "";
-        while(!mycharStack.isEmpty()){
+        while (!mycharStack.isEmpty()) {
             char ch = mycharStack.pop();
             output += ch;
         }

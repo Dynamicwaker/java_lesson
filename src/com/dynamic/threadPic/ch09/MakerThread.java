@@ -7,30 +7,30 @@ import java.util.Random;
  * @version 1.0, 2018-10-14
  * @description 生产者角色
  */
-public class MakerThread extends Thread{
+public class MakerThread extends Thread {
     private final Random random;
     private final Table table;
     private static int id = 0;
 
-    public MakerThread(String name,Table table,long seed){
+    public MakerThread(String name, Table table, long seed) {
         super(name);
         this.random = new Random(seed);
         this.table = table;
     }
 
     @Override
-    public void run(){
+    public void run() {
         try {
-            while (true){
+            while (true) {
                 Thread.sleep(random.nextInt(1000));
-                String cake = "[ Cake No."+ nextId()+ " by " + getName()+" ]";
+                String cake = "[ Cake No." + nextId() + " by " + getName() + " ]";
                 table.put(cake);
             }
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
         }
     }
 
-    private static synchronized int nextId(){
+    private static synchronized int nextId() {
         return id++;
     }
 }

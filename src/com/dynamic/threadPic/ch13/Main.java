@@ -10,13 +10,13 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Main BEGIN");
         Host host = new Host();
-        Data data1 = host.request(10,'A');
-        Data data2 = host.request(20,'B');
-        Data data3 = host.request(30,'C');
+        Data data1 = host.request(10, 'A');
+        Data data2 = host.request(20, 'B');
+        Data data3 = host.request(30, 'C');
         System.out.println("Main otherJob BEGIN");
-        try{
+        try {
             Thread.sleep(2000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
 
         }
         System.out.println("Main otherJob END");

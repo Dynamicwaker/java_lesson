@@ -19,13 +19,13 @@ public class EaterThread extends Thread {
     }
 
     @Override
-    public void run(){
+    public void run() {
         try {
-            while (true){
+            while (true) {
                 String cake = table.take();
                 Thread.sleep(random.nextInt(1000));
             }
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
 
         }
     }

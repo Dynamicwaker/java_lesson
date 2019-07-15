@@ -7,7 +7,7 @@ package com.dynamic.interview.reflect;
  */
 
 public class Foo {
-    public void print(){
+    public void print() {
         System.out.println("this is Foo");
     }
 }

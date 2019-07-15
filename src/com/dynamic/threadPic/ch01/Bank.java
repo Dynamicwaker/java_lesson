@@ -21,7 +21,7 @@ public class Bank {
      * 线程的互斥机制称为监视，或许锁叫做拥有监视
      * assert Thread.holdsLock(obj) 当前线程是否以获取某一对象的锁
      * synchronized静态方法和synchronized代码块使用的锁是不一样的
-     *
+     * <p>
      * 要执行wait方法，线程必须持有锁，等待的时候释放其锁
      */
     public synchronized void deposit(int m) {

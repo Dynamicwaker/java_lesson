@@ -16,7 +16,7 @@ public class MyRunnable implements Runnable {
     public void methodOne() {
         /**
          * 在对应线程的线程栈上
-        */
+         */
         int localVariable1 = 45;
         /**
          * MySharedObject实例存放在堆上，localVariable2引用在对应线程的线程栈上
