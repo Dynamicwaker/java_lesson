@@ -1,4 +1,4 @@
-package com.dynamic.interview;
+package com.dynamic.interview.others;
 
 /**
  * @author <a herf="mailto:xinghj0308@gmail.cn">xinghuajian</a>

@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 /**
  * @author xinghuajian
- * @description
+ * @description java8流处理操作
  * @date 2019/4/29 20:36
  */
 public class StreamTest {

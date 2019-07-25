@@ -1,4 +1,4 @@
-package com.dynamic.interview;
+package com.dynamic.interview.others;
 
 /**
  * @author <a href="mailto:xinghuajian@gtmap.cn">xinghuajian</a>

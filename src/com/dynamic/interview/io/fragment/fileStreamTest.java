@@ -1,4 +1,4 @@
-package com.dynamic.interview.io;
+package com.dynamic.interview.io.fragment;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
