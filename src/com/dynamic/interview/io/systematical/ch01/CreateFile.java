@@ -8,10 +8,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.RandomAccessFile;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 /**
  * @author xinghuajian
- * @description
+ * @description 文件操作
  * @date 2019/7/25 09:55
  */
 public class CreateFile {
@@ -19,25 +21,66 @@ public class CreateFile {
     private static String fileDir = "D:" + File.separator + "hello.txt";
 
     public static void main(String[] args) {
-        //createFile();
         //deleteFile();
         //mkdir();
         //listFile();
         //randomFile();
         //writeStrIntoFile();
+        //createFileMethodOne();
         appendInfoToFile();
         readFile();
     }
 
     /**
-     * 创建新文件
+     * 创建新文件方法一：绝对路径创建
      */
-    public static void createFile() {
+    public static void createFileMethodOne() {
         File f = new File("D:\\hello.txt");
         try {
             f.createNewFile();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    /**
+     * 创建新文件方法二：相对路径创建
+     */
+    public static void createFileMethodTwo() {
+        try {
+            // 获取目录“dir”对应的File对象
+            File dir = new File("dir");
+            File file1 = new File(dir, "file1.txt");
+            file1.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 创建新文件方法三：相对路径创建
+     */
+    public static void createFileMethodThree() {
+        try {
+            File file2 = new File("dir", "file2.txt");
+            file2.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 创建新文件方法四：绝对路径方式创建
+     */
+    public static void createFileMethodFour() {
+        try {
+            URI uri = new URI("file:/home/xing/dir/file4.txt");
+            File file4 = new File(uri);
+            file4.createNewFile();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 
@@ -55,10 +98,26 @@ public class CreateFile {
 
     /**
      * 创建一个文件夹
+     * 可以根据相对路径/绝对路径/URI方式创建
      */
     public static void mkdir() {
         File file = new File(fileDir);
         file.mkdir();
+    }
+
+    /**
+     * 创建子目录
+     * 它不需要dir已经存在，也能正常运行；若“sub4”的父母路不存在，mkdirs()方法会自动创建父目录
+     */
+    public static void mkSubDir() {
+        URI uri = null;
+        try {
+            uri = new URI("file:/home/skywang/dir/sub5");
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        File sub5 = new File(uri);
+        sub5.mkdirs();
     }
 
     /**
@@ -141,6 +200,7 @@ public class CreateFile {
         File file = new File(fileDir);
         try {
             InputStream inputStream = new FileInputStream(file);
+            // byte类型的数组，数组长度为1024。也就是说你最多可以存1024个字节
             byte[] byteArr = new byte[1024];
             int count = 0;
             int temp;
@@ -155,7 +215,5 @@ public class CreateFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 }
