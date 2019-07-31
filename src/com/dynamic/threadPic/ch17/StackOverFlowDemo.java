@@ -16,7 +16,8 @@ public class StackOverFlowDemo {
     int count = 0;
 
     public void recursiveMethod() {
-        if (count == 1000000) {//递归方法执行1000000次时，结束
+        //递归方法执行1000000次时，结束
+        if (count == 1000000) {
             return;
         }
         count++;

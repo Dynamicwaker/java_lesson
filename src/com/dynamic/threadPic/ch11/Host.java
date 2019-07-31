@@ -12,7 +12,11 @@ package com.dynamic.threadPic.ch11;
 public class Host {
     private final Helper helper = new Helper();
 
-    // request方法并不会等待handle方法执行结束，而是立即返回，创建了新的线程
+    /**
+     * request方法并不会等待handle方法执行结束，而是立即返回，创建了新的线程
+     * @param count
+     * @param c
+     */
     public void request(final int count, final char c) {
         System.out.println(" request(" + count + ", " + c + ") BEGIN");
         // 匿名内部类用到的出参数需要声明成final

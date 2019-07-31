@@ -13,7 +13,9 @@ public class Gate {
     private String name = "Nobody";
     private String address = "NoWhere";
 
-    // 改写成synchronized
+    /**
+     * 改写成synchronized
+     */
     public synchronized void pass(String name, String address) {
         this.counter++;
         this.name = name;
@@ -21,7 +23,10 @@ public class Gate {
         check();
     }
 
-    // 改写成synchronized
+    /**
+     * 改写成synchronized
+     */
+    @Override
     public synchronized String toString() {
         return "No." + counter + ": " + name + ", " + address;
 

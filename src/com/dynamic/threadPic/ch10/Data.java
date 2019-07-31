@@ -36,7 +36,9 @@ public class Data {
         }
     }
 
-    // 数组的复制，System.arraycopy也可实现
+    /**
+     * 数组的复制，System.arraycopy也可实现
+     */
     private char[] doRead() {
         char[] newbuf = new char[buffer.length];
         for (int i = 0; i < buffer.length; i++) {
@@ -46,7 +48,11 @@ public class Data {
         return newbuf;
     }
 
-    // for循环每次执行slowly()，默认写入数据比读所需要的时间长
+    /**
+     * for循环每次执行slowly()，默认写入数据比读所需要的时间长
+     *
+     * @param c
+     */
     private void doWrite(char c) {
         for (int i = 0; i < buffer.length; i++) {
             buffer[i] = c;
@@ -54,7 +60,9 @@ public class Data {
         }
     }
 
-    // 辅助延时功能
+    /**
+     * 辅助延时功能
+     */
     private void slowly() {
         try {
             Thread.sleep(50);

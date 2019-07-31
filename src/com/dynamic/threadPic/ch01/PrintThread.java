@@ -13,6 +13,7 @@ public class PrintThread extends Thread {
         this.message = message;
     }
 
+    @Override
     public void run() {
         for (int i = 0; i < 10000; i++) {
             System.out.println(message);

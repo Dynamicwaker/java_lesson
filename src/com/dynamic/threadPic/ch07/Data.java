@@ -20,7 +20,9 @@ public class Data {
         this.filename = filename;
     }
 
-    // 修改数据内容
+    /**
+     * 修改数据内容
+     */
     public synchronized void change(String newContent) {
         content = newContent;
         changed = true;

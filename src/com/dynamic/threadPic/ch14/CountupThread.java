@@ -15,14 +15,19 @@ public class CountupThread extends Thread {
      */
     private volatile boolean shutdownRequested = false;
 
-    // 终止请求
+    /**
+     * 终止请求
+     */
     public void shutdownRequest() {
         shutdownRequested = true;
         // 如果该线程是sleep或者wait，光判断请求状态是不够的
         interrupt();
     }
 
-    // 检查是否发出了终止请求
+    /**
+     * 检查是否发出了终止请求
+     */
+
     public boolean isShutdownRequested() {
         return shutdownRequested;
     }

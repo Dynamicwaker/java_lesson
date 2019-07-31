@@ -7,7 +7,9 @@ package com.dynamic.threadPic.ch02;
  */
 
 public class UserThread extends Thread {
-    // 空白final，不在字段声明时赋值，在构造函数中将字段值初始化的形式
+    /**
+     * 空白final，不在字段声明时赋值，在构造函数中将字段值初始化的形式
+     */
     private final Gate gate;
     private final String myName;
     private final String myAddress;

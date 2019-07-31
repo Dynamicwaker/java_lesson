@@ -21,7 +21,9 @@ public class Host {
         this.timeout = timeout;
     }
 
-    // 修改状态
+    /**
+     * 修改状态
+     */
     public synchronized void setExecutable(boolean on) {
         ready = on;
         notifyAll();

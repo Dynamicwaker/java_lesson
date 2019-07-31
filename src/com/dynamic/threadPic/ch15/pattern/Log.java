@@ -21,7 +21,9 @@ public class Log {
         getTSLog().close();
     }
 
-    // 获取线程特有的日志
+    /**
+     * 获取线程特有的日志
+     */
     private static TSLog getTSLog() {
         TSLog tsLog = tsLogCollection.get();
         // 如果该线程是第一次调用本方法，就新生成并注册一个日志

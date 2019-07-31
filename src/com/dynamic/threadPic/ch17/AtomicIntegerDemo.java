@@ -27,6 +27,10 @@ public class AtomicIntegerDemo {
         for (int k = 0; k < 10; k++) {
             ts[k].start();
         }
+        /**
+         * 主线程main()等待ts[0]-ts[9]全部执行完才会执行，确保全部值执行完毕才接着执行
+         * println(i)芳芳，这样才能保证值能够累加到100000
+         */
         for (int k = 0; k < 10; k++) {
             ts[k].join();
         }

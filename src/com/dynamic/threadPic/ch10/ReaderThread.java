@@ -17,8 +17,8 @@ public class ReaderThread extends Thread {
     public void run() {
         try {
             while (true) {
-                char[] readbuf = data.read();
-                System.out.println(Thread.currentThread().getName() + " reads " + String.valueOf(readbuf));
+                char[] readBuf = data.read();
+                System.out.println(Thread.currentThread().getName() + " reads " + String.valueOf(readBuf));
             }
         } catch (InterruptedException e) {
 

@@ -20,12 +20,18 @@ public class TSLog {
         }
     }
 
-    // 写日志
+    /**
+     * 写日志
+     *
+     * @param s
+     */
     public void println(String s) {
         writer.println(s);
     }
 
-    // 关闭日志
+    /**
+     * 关闭日志
+     */
     public void close() {
         writer.println("=== End of log ===");
         writer.close();

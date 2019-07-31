@@ -13,7 +13,9 @@ import java.util.Queue;
 public class RequestQueue {
     private final Queue<Request> queue = new LinkedList<Request>();
 
-    // 会返回最先放入的请求，没有则等待，直到有线程putRequest
+    /**
+     *     会返回最先放入的请求，没有则等待，直到有线程putRequest
+     */
     public synchronized Request getRequest() {
         // 如果队列中有元素则返回头元素否则返回null
         // 此处作为守护条件
