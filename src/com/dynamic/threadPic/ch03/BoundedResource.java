@@ -9,7 +9,13 @@ import java.util.concurrent.Semaphore;
  * @description 资源个数有限
  */
 public class BoundedResource {
+    /**
+     * 类中控制资源的变量
+     */
     private final Semaphore semaphore;
+    /**
+     * 资源设置的限制数量
+     */
     private final int permits;
     private final static Random random = new Random(314159);
 

@@ -28,7 +28,7 @@ public class JoinDemo {
         // 模拟主线干其他事花了2秒
         Thread.sleep(2000);
         System.out.println("主线程执行完毕，等待t线程执行完成...");
-        // 主线程2秒后就可以继续执行，但是其必须执行的条件是t线程必须执行完成，此时调用t的join方法
+        // 主线程main()2秒后就可以继续执行，但是其必须执行的条件是t线程必须执行完成，此时调用t的join方法
         long joinStart = System.currentTimeMillis();
         t.join();
         System.out.println("主线程：t执行已经执行完毕...，等待了" + (System.currentTimeMillis() - joinStart) / 1000 + "秒");
