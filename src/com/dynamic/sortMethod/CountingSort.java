@@ -22,15 +22,18 @@ public class CountingSort {
     }
 
     public static int[] countingSort(int[] array) {
-        if (array.length == 0)
+        if (array.length == 0) {
             return array;
+        }
         int bias, min = array[0], max = array[0];
         //最大和最小元素
         for (int i = 1; i < array.length; i++) {
-            if (array[i] > max)
+            if (array[i] > max) {
                 max = array[i];
-            if (array[i] < min)
+            }
+            if (array[i] < min) {
                 min = array[i];
+            }
         }
 
         bias = 0 - min;
