@@ -1,6 +1,5 @@
 package com.dynamic.threadPic.ch17.future;
 
-import com.sun.org.apache.regexp.internal.RE;
 
 /**
  * @author <a herf="mailto:xinghj0308@gmail.cn">xinghuajian</a>
@@ -10,7 +9,7 @@ import com.sun.org.apache.regexp.internal.RE;
 
 public class FutureData implements Data {
     /**
-     * FutrueData是RealData的包装
+     * FutureData是RealData的包装
      */
     protected RealData realData = null;
     protected boolean isReady = false;

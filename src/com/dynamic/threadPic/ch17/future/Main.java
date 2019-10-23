@@ -3,7 +3,7 @@ package com.dynamic.threadPic.ch17.future;
 /**
  * @author <a herf="mailto:xinghj0308@gmail.cn">xinghuajian</a>
  * @version Created on 2018/11/24.17:11
- * @description
+ * @description 测试主类
  */
 
 public class Main {

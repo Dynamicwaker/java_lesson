@@ -6,5 +6,8 @@ package com.dynamic.interview.proxy.demoone;
  * @description 静态代理（代理类和服务类都需要实现该接口）
  */
 public interface Subject {
+    /**
+     * just do something
+     */
     void doSomething();
 }

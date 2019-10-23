@@ -18,15 +18,16 @@ public class ClassUtil {
      * @author <a herf="mailto:xinghj0308@gmail.cn">xinghuajian</a>
      */
     public static void printClassMessage(Object object) {
-        // 要获取类的类类型
-        Class c = object.getClass();//传递的是哪个子类的对象，c就是该子类的类类型
+        // 要获取类的类类型，传递的是哪个子类的对象，c就是该子类的类类型
+        Class c = object.getClass();
         // 获取类的名称
         System.out.println("类的名称是：" + c.getName());
         // Method类，方法对象
         // 一个成员方法就是一个Method对象
         // getMethods()方法获取的是所有public的函数，包括从父类继承而来的
         // getDeclaredMethods()获取的是该类自己生命的所有方法，不问访问权限
-        Method[] methods = c.getMethods();//c.getDeclaredMethods()
+        //  c.getDeclaredMethods()
+        Method[] methods = c.getMethods();
         for (int i = 0; i < methods.length; i++) {
             // 得到方法的返回值类型的类类型
             Class returnType = methods[i].getReturnType();
@@ -34,6 +35,7 @@ public class ClassUtil {
             // 得到方法名的名称
             System.out.print(methods[i].getName() + "(");
             Class[] paramTypes = methods[i].getParameterTypes();
+            // 参数的名字
             for (Class clazz : paramTypes) {
                 System.out.print(clazz.getName() + " ");
             }
@@ -55,7 +57,7 @@ public class ClassUtil {
          * java.lang.reflect.Field
          * Field类封装了关于成员变量的操作
          * getFields()方法获取的是所有public的成员变量的信息
-         * getDeclaredFields获取的所有该类自己生命的成员变量的信息
+         * getDeclaredFields获得某个类的所有声明的字段，即包括public、private和protected，但是不包括父类的申明字段。
          */
         Field[] fs = c.getDeclaredFields();
         for (Field field : fs) {
@@ -76,8 +78,8 @@ public class ClassUtil {
      */
     public static void printConstructorMessage(Object object) {
         Class c = object.getClass();
-        // Constructor[] cs = c.getConstructors(); 获取所有的public的构造函数
-        Constructor[] cs = c.getDeclaredConstructors(); // 获取所有的构造函数
+        // Constructor[] cs = c.getConstructors(); 获取所有的public的构造函数，获取所有的构造函数
+        Constructor[] cs = c.getDeclaredConstructors();
         for (Constructor constructor : cs) {
             System.out.print(constructor.getName() + "(");
             Class[] paramType = constructor.getParameterTypes();

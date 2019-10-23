@@ -7,5 +7,9 @@ package com.dynamic.threadPic.ch17.future;
  */
 
 public interface Data {
+    /**
+     * 获取数据
+     * @return
+     */
     String getResult();
 }

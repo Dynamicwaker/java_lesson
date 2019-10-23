@@ -25,7 +25,9 @@ public class Triangle {
         System.out.println(Fibonacci(5));
     }
 
-    // 使用循环
+    /**
+     * 使用循环
+      */
     public static int triangleTest(int n) {
         int total = 0;
         while (n > 0) {
@@ -35,7 +37,9 @@ public class Triangle {
         return total;
     }
 
-    // 使用递归
+    /**
+     * 使用递归
+      */
     public static int triangleRecursion(int n) {
         if (n == 1) {
             return 1;

@@ -11,7 +11,9 @@ public class ClassDemo3 {
     public static void main(String[] args) {
         String s = "hello";
         ClassUtil.printClassMessage(s);
-        ClassUtil.printFieldMessage(s);// [C类似的是数组的反射，也是最复杂的一种
+        System.out.println("--------------------------------------------");
+        // [C类似的是数组的反射，也是最复杂的一种
+        ClassUtil.printFieldMessage(s);
         System.out.println("--------------------------------------------");
         Integer i = 0;
         ClassUtil.printClassMessage(i);
