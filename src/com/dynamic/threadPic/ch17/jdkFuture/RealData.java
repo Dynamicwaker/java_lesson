@@ -16,7 +16,7 @@ public class RealData implements Callable<String> {
     }
 
     @Override
-    public String call() throws Exception {
+    public String call() {
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < 10; i++) {
             sb.append(data + i).append(" ");

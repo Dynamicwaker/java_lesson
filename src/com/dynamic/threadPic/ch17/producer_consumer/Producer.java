@@ -21,7 +21,7 @@ public class Producer implements Runnable {
      * 总数，原子操作
      */
     private static AtomicInteger count = new AtomicInteger();
-    private static final int SLEEPTIME = 1000;
+    private static final int SLEEP_TIME = 1000;
 
     public Producer(BlockingQueue<PCData> queue) {
         this.queue = queue;
@@ -30,13 +30,13 @@ public class Producer implements Runnable {
 
     @Override
     public void run() {
-        PCData data = null;
+        PCData data;
 
         Random random = new Random();
         System.out.println("start producer id:" + Thread.currentThread().getId());
         try {
             while (isRunning) {
-                Thread.sleep(random.nextInt(SLEEPTIME));
+                Thread.sleep(random.nextInt(SLEEP_TIME));
                 // 构造任务数据
                 data = new PCData(count.incrementAndGet());
                 System.out.println(data + " is put into queue");
