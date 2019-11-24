@@ -6,7 +6,7 @@ package com.dynamic.interview.pattern.singleton;
  * @description 比较完美的方式：静态内部类实现
  * 当 Singleton 类加载时，静态内部类 SingletonHolder 没有被加载进内存。
  * 只有当调用 getUniqueInstance() 方法从而触发 SingletonHolder.INSTANCE 时 SingletonHolder 才会被加载，
- * 此时初始化 INSTANCE 实例，并且 JVM 能确保 INSTANCE 只被实例化一次。
+ * 此时初始化 INSTANCE 实例，并且 JVM 能确保 INSTANCE 只被实例化一次。同样能保证线程安全
  */
 
 public class StaticSingleton {

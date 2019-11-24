@@ -1,7 +1,5 @@
 package com.dynamic.interview.proxy.demoone;
 
-import com.dynamic.interview.proxy.demoone.RealSubject;
-import com.dynamic.interview.proxy.demoone.Subject;
 
 /**
  * @author <a href="mailto:xinghuajian@gtmap.cn">xinghuajian</a>

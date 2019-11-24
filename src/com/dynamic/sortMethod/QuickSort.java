@@ -10,6 +10,7 @@ package com.dynamic.sortMethod;
  * 重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。
  * 在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；
  * 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序。
+ * git ctrl+k 提交 ctrl+t 更新
  */
 public class QuickSort {
 
@@ -27,24 +28,23 @@ public class QuickSort {
         if (array.length <= 1 || start < 0 || end >= array.length || start > end)
             return null;
         int smallIndex = partition(array, start, end);
-        if (smallIndex > start)
-            quickSort(array, start, smallIndex - 1);
-        if (smallIndex < end)
-            quickSort(array, smallIndex + 1, end);
+        quickSort(array, start, smallIndex - 1);
+        quickSort(array, smallIndex + 1, end);
         return array;
     }
 
     //分割,把元素比基准小的放到一边，大的放到一边，然后排序
     public static int partition(int[] array, int start, int end) {
-        //double类型强转
+        //double类型强转,随机选取的基准
         int pivot = (int) (start + Math.random() * (end - start + 1));
         int smallIndex = start - 1;
         swap(array, pivot, end);
         for (int i = start; i <= end; i++) {
             if (array[i] <= array[end]) {
                 smallIndex++;
-                if (i > smallIndex)
+                if (i > smallIndex) {
                     swap(array, i, smallIndex);
+                }
             }
         }
         return smallIndex;
