@@ -54,7 +54,7 @@ public class ClassUtil {
          * 成员变量也是对象
          * java.lang.reflect.Field
          * Field类封装了关于成员变量的操作
-         * getFields()方法获取的是所有public的成员变量的信息
+         * getFields()方法获取的是所有public的成员变量的信息,不能获取私有的
          * getDeclaredFields获取的所有该类自己生命的成员变量的信息
          */
         Field[] fs = c.getDeclaredFields();

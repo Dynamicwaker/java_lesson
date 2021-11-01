@@ -26,6 +26,9 @@ public class MethodDemo1 {
             System.out.println("-------------------------------------");
             // 两种都可以
             Method method2 = c.getMethod("print", new Class[]{});
+            // Method和Field、Constructor都有setAccessible()方法，参数为true，反射的对象在使用时取消访问检查，提高反射的效率
+            // 参数值为false则表示反射的对象执行访问检查
+            method2.setAccessible(Boolean.TRUE);
             method2.invoke(a1);
 
             Method method3 = c.getMethod("print");
