@@ -1,10 +1,23 @@
-package com.dynamic.interview.leetcode;
+package com.dynamic.leetcode.array;
+
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Solution_485 {
 
     public static void main(String[] args) {
         int[] i = new int[]{1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1};
         System.out.println(findMaxConsecutiveOnes(i));
+
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(1);
+        queue.offer(2);
+        int ine = ((LinkedList<Integer>) queue).pop();
+        System.out.println(ine);
+
+
+        Deque<Integer> q = new LinkedList<>();
 
     }
 
