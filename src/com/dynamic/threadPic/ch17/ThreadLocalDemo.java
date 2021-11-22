@@ -16,6 +16,8 @@ public class ThreadLocalDemo {
 
     static ThreadLocal<SimpleDateFormat> t1 = new ThreadLocal<>();
 
+    private static final Integer LOOP_TIME = 1000;
+
     public static class ParseDate implements Runnable {
         int i = 0;
 
@@ -41,7 +43,7 @@ public class ThreadLocalDemo {
 
     public static void main(String[] args) {
         ExecutorService es = Executors.newFixedThreadPool(10);
-        for (int j = 0; j < 1000; j++) {
+        for (int j = 0; j < LOOP_TIME; j++) {
             es.execute(new ParseDate(j));
         }
     }

@@ -9,6 +9,7 @@ import java.util.concurrent.FutureTask;
  * @author <a herf="mailto:xinghj0308@gmail.cn">xinghuajian</a>
  * @version Created on 2018/11/24.17:30
  * @description jdk中future模式的实现
+ * 核心在于去除了主函数的等待时间，比如以下程序中的Thread.sleep(2000)，在处理复杂事务的同时，重量级数据的构造也在进行中
  */
 
 public class FutureMain {
