@@ -9,7 +9,6 @@ import java.nio.channels.SocketChannel;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
-import org.junit.Test;
 
 /**
  * 一、使用 NIO 完成网络通信的三个核心：
@@ -33,7 +32,6 @@ import org.junit.Test;
 public class TestBlockingNIO {
 
 	//客户端
-	@Test
 	public void client() throws IOException{
 		//1. 获取通道
 		SocketChannel sChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 9898));
@@ -56,7 +54,6 @@ public class TestBlockingNIO {
 	}
 
 	//服务端
-	@Test
 	public void server() throws IOException{
 		//1. 获取通道
 		ServerSocketChannel ssChannel = ServerSocketChannel.open();

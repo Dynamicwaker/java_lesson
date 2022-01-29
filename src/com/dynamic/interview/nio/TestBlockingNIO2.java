@@ -9,7 +9,6 @@ import java.nio.channels.SocketChannel;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
-import org.junit.Test;
 
 public class TestBlockingNIO2 {
 
@@ -17,7 +16,7 @@ public class TestBlockingNIO2 {
 	 * 客户端
 	 * @throws IOException
 	 */
-	@Test
+	
 	public void client() throws IOException{
 		SocketChannel sChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 9898));
 		
@@ -48,7 +47,7 @@ public class TestBlockingNIO2 {
 	/**
 	 * 服务端
 	 */
-	@Test
+	
 	public void server() throws IOException{
 		ServerSocketChannel ssChannel = ServerSocketChannel.open();
 		

@@ -14,13 +14,12 @@ import java.nio.file.StandardOpenOption;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.DosFileAttributeView;
 
-import org.junit.Test;
 
 public class TestNIO_2 {
 	
 	
 	//自动资源管理：自动关闭实现 AutoCloseable 接口的资源
-	@Test
+	
 	public void test8(){
 		try(FileChannel inChannel = FileChannel.open(Paths.get("1.jpg"), StandardOpenOption.READ);
 				FileChannel outChannel = FileChannel.open(Paths.get("2.jpg"), StandardOpenOption.WRITE, StandardOpenOption.CREATE)){
@@ -40,7 +39,7 @@ public class TestNIO_2 {
 			InputStream newInputStream(Path path, OpenOption…how):获取 InputStream 对象
 			OutputStream newOutputStream(Path path, OpenOption…how) : 获取 OutputStream 对象
 	 */
-	@Test
+	
 	public void test7() throws IOException{
 		SeekableByteChannel newByteChannel = Files.newByteChannel(Paths.get("1.jpg"), StandardOpenOption.READ);
 		
@@ -62,7 +61,7 @@ public class TestNIO_2 {
 			boolean notExists(Path path, LinkOption … opts) : 判断文件是否不存在
 			public static <A extends BasicFileAttributes> A readAttributes(Path path,Class<A> type,LinkOption... options) : 获取与 path 指定的文件相关联的属性。
 	 */
-	@Test
+	
 	public void test6() throws IOException{
 		Path path = Paths.get("e:/nio/hello7.txt");
 //		System.out.println(Files.exists(path, LinkOption.NOFOLLOW_LINKS));
@@ -85,7 +84,7 @@ public class TestNIO_2 {
 			Path move(Path src, Path dest, CopyOption…how) : 将 src 移动到 dest 位置
 			long size(Path path) : 返回 path 指定文件的大小
 	 */
-	@Test
+	
 	public void test5() throws IOException{
 		Path path1 = Paths.get("e:/nio/hello2.txt");
 		Path path2 = Paths.get("e:/nio/hello7.txt");
@@ -95,7 +94,7 @@ public class TestNIO_2 {
 //		Files.move(path1, path2, StandardCopyOption.ATOMIC_MOVE);
 	}
 	
-	@Test
+	
 	public void test4() throws IOException{
 		Path dir = Paths.get("e:/nio/nio2");
 //		Files.createDirectory(dir);
@@ -106,7 +105,7 @@ public class TestNIO_2 {
 		Files.deleteIfExists(file);
 	}
 	
-	@Test
+	
 	public void test3() throws IOException{
 		Path path1 = Paths.get("e:/nio/hello.txt");
 		Path path2 = Paths.get("e:/nio/hello2.txt");
@@ -130,7 +129,7 @@ public class TestNIO_2 {
 			Path toAbsolutePath() : 作为绝对路径返回调用 Path 对象
 			String toString() ： 返回调用 Path 对象的字符串表示形式
 	 */
-	@Test
+	
 	public void test2(){
 		Path path = Paths.get("e:/nio/hello.txt");
 		
@@ -147,7 +146,7 @@ public class TestNIO_2 {
 		System.out.println(path.toString());
 	}
 	
-	@Test
+	
 	public void test1(){
 		Path path = Paths.get("e:/", "nio/hello.txt");
 		
