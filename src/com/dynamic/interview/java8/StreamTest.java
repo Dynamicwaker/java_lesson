@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 import java.util.List;
-import java.util.LongSummaryStatistics;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -15,6 +14,10 @@ import java.util.stream.Collectors;
  */
 public class StreamTest {
     public static void main(String args[]) {
+
+
+        System.out.println("");
+
         System.out.println("使用 Java 7: ");
 
         // 计算空字符串

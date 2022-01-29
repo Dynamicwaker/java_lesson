@@ -4,11 +4,9 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.Pipe;
 
-import org.junit.Test;
 
 public class TestPipe {
 
-	@Test
 	public void test1() throws IOException{
 		//1. 获取管道
 		Pipe pipe = Pipe.open();

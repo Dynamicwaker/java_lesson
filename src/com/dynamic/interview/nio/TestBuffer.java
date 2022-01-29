@@ -2,7 +2,6 @@ package com.dynamic.interview.nio;
 
 import java.nio.ByteBuffer;
 
-import org.junit.Test;
 
 /**
  * 一、缓冲区（Buffer）：在 Java NIO 中负责数据的存取。缓冲区就是数组。用于存储不同数据类型的数据
@@ -37,7 +36,7 @@ import org.junit.Test;
  */
 public class TestBuffer {
 
-    @Test
+   
     public void test3() {
         //分配直接缓冲区
         ByteBuffer buf = ByteBuffer.allocateDirect(1024);
@@ -45,7 +44,7 @@ public class TestBuffer {
         System.out.println(buf.isDirect());
     }
 
-    @Test
+   
     public void test2() {
         String str = "abcde";
 
@@ -79,7 +78,7 @@ public class TestBuffer {
         }
     }
 
-    @Test
+   
     public void test1() {
         String str = "abcde";
 

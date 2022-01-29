@@ -1,5 +1,8 @@
 package com.dynamic.interview.jvm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author <a href="mailto:xinghuajian@gtmap.cn">xinghuajian</a>
  * @version 1.0, 2018-10-24
@@ -24,4 +27,12 @@ public class MySharedObject {
 
     public long member1 = 12345;
     public long member2 = 67890;
+
+
+    public static void main(String[] args) {
+        List<Integer> ints = new ArrayList<>(1024 * 4);
+        for(;;) {
+            ints.add((int)Math.random()*100);
+        }
+    }
 }

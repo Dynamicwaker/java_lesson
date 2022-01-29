@@ -10,11 +10,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Scanner;
 
-import org.junit.Test;
-
 public class TestNonBlockingNIO2 {
-	
-	@Test
+
 	public void send() throws IOException{
 		DatagramChannel dc = DatagramChannel.open();
 		
@@ -34,8 +31,7 @@ public class TestNonBlockingNIO2 {
 		
 		dc.close();
 	}
-	
-	@Test
+
 	public void receive() throws IOException{
 		DatagramChannel dc = DatagramChannel.open();
 		

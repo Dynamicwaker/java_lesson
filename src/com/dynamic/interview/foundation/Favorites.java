@@ -9,10 +9,10 @@ import java.util.Objects;
  * @create: 2021/12/20
  * @description:
  */
-public class Favorties {
+public class Favorites {
     private Map<Class<?>, Object> favorties = new HashMap<>();
 
-    public <T> void putFavorties(Class<T> type, T instance) {
+    public <T> void putFavorites(Class<T> type, T instance) {
         favorties.put(Objects.requireNonNull(type), instance);
     }
 
@@ -21,11 +21,14 @@ public class Favorties {
     }
 
     public static void main(String[] args) {
-        Favorties f = new Favorties();
-        f.putFavorties(String.class, "java");
-        f.putFavorties(Integer.class, 16);
-        f.putFavorties(Class.class, Favorties.class);
+        Favorites f = new Favorites();
+        f.putFavorites(String.class, "java");
+        f.putFavorites(Integer.class, 16);
+        f.putFavorites(Class.class, Favorites.class);
 
-        String favoriteString = 
+        String favoriteString = f.getFavorite(String.class);
+        int favoriteInteger = f.getFavorite(Integer.class);
+        Class<?> favoriteClass = f.getFavorite(Class.class);
+        System.out.printf("%s %x %s%n", favoriteString, favoriteInteger, favoriteClass.getName());
     }
 }
